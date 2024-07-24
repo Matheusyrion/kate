@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Charada Romântica</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+            text-align: center;
+            margin: 0;
+            padding: 50px;
+        }
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: inline-block;
+        }
+        input[type="text"] {
+            width: 80%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            padding: 10px 20px;
+            border: none;
+            background-color: #ff69b4;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .message {
+            margin-top: 20px;
+            font-size: 18px;
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Charada Romântica</h1>
+        <p>Sou um algoritmo que encontra a solução mais rápida para qualquer problema, mas meu verdadeiro objetivo é encontrar o caminho para o seu coração. Quem sou eu?</p>
+        <input type="text" id="answer" placeholder="Digite sua resposta aqui...">
+        <button onclick="checkAnswer()">Enviar</button>
+        <div id="message" class="message"></div>
+    </div>
+    <script>
+        function checkAnswer() {
+            var answer = document.getElementById("answer").value.toLowerCase();
+            var message = document.getElementById("message");
+            if (answer === "você" || answer === "voce") {
+                message.innerHTML = "Parabéns, você acertou! Assim como um algoritmo eficiente, você encontrou o caminho mais rápido para o meu coração. Te amo!";
+            } else {
+                message.innerHTML = "Resposta incorreta, tente novamente.";
+            }
+        }
+    </script>
+</body>
+</html>
